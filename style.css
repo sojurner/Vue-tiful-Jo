@@ -1,0 +1,8 @@
+.is-loading {
+  background: rgb(172, 81, 81);
+  color: aliceblue;
+}
+
+.disabled {
+  color: red;
+}
