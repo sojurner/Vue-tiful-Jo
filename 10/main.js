@@ -10,6 +10,8 @@ Vue.component('modal', {
   `
 });
 
+// ul#tabs>li*4>a[href=#]
+
 new Vue({
   el: '#root',
   data: {
