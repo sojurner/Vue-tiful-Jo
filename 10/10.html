@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="../vue.js"></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.css"
+    />
+    <title>Your Mom</title>
+  </head>
+  <body>
+    <div id="root">
+      <modal v-if="showModal" @close="showModal = false">Paul Kim</modal>
+      <button @click="showModal=true">Show modal</button>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
