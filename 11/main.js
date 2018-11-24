@@ -3,7 +3,7 @@ Vue.component('tabs', {
     <div>
       <div class="tabs">
         <ul>
-          <li v-for="tab in tabs" :class="{ 'is-active': tab.isActive }"><a href="#" @click="selectTab(tab)">{{tab.name}}</a></li>
+          <li v-for="tab in tabs" :class="{ 'is-active': tab.isActive }"><a :href="tab.href" @click="selectTab(tab)">{{tab.name}}</a></li>
         </ul>
       </div>
 
@@ -38,6 +38,12 @@ Vue.component('tab', {
   props: {
     name: { required: true },
     selected: { default: false }
+  },
+
+  computed: {
+    href() {
+      return `#${this.name.toLowerCase().replace(/ /g, '-')}`;
+    }
   },
 
   data() {
