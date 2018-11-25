@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="../vue.js"></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.css"
+    />
+    <title>Single-use components and inline templates</title>
+  </head>
+  <body>
+    <div id="root" class="container">
+      <progress-view inline-template>
+        <div>
+          <h1>Your progress through this course is {{ completionRate }}%</h1>
+          <p>
+            <button @click="completionRate +=10">
+              Increase Completion Rate
+            </button>
+          </p>
+          <p>
+            <button @click="completionRate -=10">Lower Completion Rate</button>
+          </p>
+        </div>
+      </progress-view>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
